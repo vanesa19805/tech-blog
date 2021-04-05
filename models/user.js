@@ -1,4 +1,3 @@
-const { stubFalse } = require('lodash');
 const {model, DataTypes} = require('sequelize');
 const sequelize =require('../config/connection')
 
@@ -24,11 +23,10 @@ Passsword:{
         len: [8],
     },
 },
-
     },
 
 {
-    hooks: {
+hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
             return newUserData;
