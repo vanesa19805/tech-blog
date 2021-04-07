@@ -1,11 +1,10 @@
-const { Model, DataTypes } = require('sequelize');
+const {   DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
 const User = require('./user');
 const Post = require('./post');
-const { model } = require('../config/connection');
-
+ 
 
 
 // associate the post to the user. this is for when the user creates a comment postill i need to use onDELETE??
